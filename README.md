@@ -12,6 +12,7 @@ This Eleventy plugin allows authors to **use the standard Markdown syntax for im
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Why does this project exist?](#why-does-this-project-exist)
+- [How does it work?](#how-does-it-work)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Alternatives](#alternatives)
@@ -32,6 +33,12 @@ As Steve Jobs [once said](https://www.youtube.com/watch?v=oeqPrUmVz-o):
 Most content authors should not have to learn the complex responsive images HTML syntax, and how it is used by browsers to load the right image for current viewing context.
 
 Knowing that [`<picture>` is only required for rare advanced usages](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/), **`eleventy-plugin-images-responsiver` should be enough for most use cases**, known as Resolution Switching. Read [this article on Cloudfour's blog to know more of the theory](https://cloudfour.com/thinks/responsive-images-the-simple-way/).
+
+# How does it work?
+
+`eleventy-plugin-images-responsiver` is **the glue** between Eleventy plugin and transformations system and [`images-responsiver`](../images-responsiver/), the generic HTML transformation npm package for simple responsive images.
+
+Eleventy uses Markdown-it to transform Markdown content into HTML, and then runs the transform added by `eleventy-plugin-images-responsiver`, which calls `images-responsiver` to actually transform the HTML.
 
 > **Warning**
 > This plugin doesn't generate any image, it has to be used either with already existing images, a local image resizing solution (should work with the official [eleventy-img](https://www.11ty.dev/docs/plugins/image/) plugin), or a third party service ("image CDN") like Cloudinary.
