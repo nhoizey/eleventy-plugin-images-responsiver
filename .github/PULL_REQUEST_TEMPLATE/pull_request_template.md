@@ -1,6 +1,6 @@
 Fixes #
 
-Changes proposed in thi pull request:
+Changes proposed in this pull request:
 
 -
 

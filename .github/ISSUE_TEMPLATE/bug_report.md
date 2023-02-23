@@ -26,8 +26,8 @@ If applicable, add screenshots and/or console logs to help explain your problem.
 **Environment**
 
 - OS and version: [e.g. macOS 10.14.5]
-- Eleventy version: [e.g. 0.11.0]
-- `images-responsiver` or `eleventy-plugin-images-responsiver` version: [e.g. 1.8.2]
+- Eleventy version: [e.g. 2.0.0]
+- `eleventy-plugin-images-responsiver` version: [e.g. 2.0.1]
 
 **Additional context**
 Add any other context about the problem here.

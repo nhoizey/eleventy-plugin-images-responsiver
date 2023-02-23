@@ -1,12 +1,45 @@
 {
-	"name": "root",
-	"private": true,
+	"name": "eleventy-plugin-images-responsiver",
+	"version": "2.0.0",
+	"description": "Global solution for responsive images in Eleventy, allowing authors to use Markdown syntax for image and yet get responsive images in generated HTML.",
+	"main": "eleventy-plugin-images-responsiver.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nhoizey/images-responsiver.git"
+	},
+	"files": [
+		"./"
+	],
 	"scripts": {
-		"postinstall": "lerna bootstrap",
-		"test": "lerna run test",
-		"publish": "env $(cat .env | xargs) HUSKY=0 lerna publish --conventional-commits",
-		"publish-alpha": "env $(cat .env | xargs) HUSKY=0 lerna publish --conventional-commits --conventional-prerelease --force-publish",
+		"lint": "eslint . --ext js --quiet --fix",
 		"prepare": "husky install"
+	},
+	"keywords": [
+		"static-site-generator",
+		"static-site",
+		"website",
+		"blog",
+		"generator",
+		"eleventy",
+		"eleventy-plugin",
+		"11ty",
+		"html",
+		"markdown",
+		"image",
+		"images",
+		"responsive",
+		"RWD",
+		"srcset",
+		"sizes",
+		"Cloudinary"
+	],
+	"author": "Nicolas Hoizey",
+	"license": "MIT",
+	"peerDependencies": {
+		"@11ty/eleventy": ">= 2.0.0 < 3"
+	},
+	"dependencies": {
+		"images-responsiver": "^1.12.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^12.1.4",
@@ -14,7 +47,11 @@
 		"eslint": "^7.29.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^4.0.0",
-		"husky": "^7.0.0",
-		"lerna": "^6.5.1"
-	}
+		"husky": "^7.0.0"
+	},
+	"bugs": {
+		"url": "https://github.com/nhoizey/images-responsiver/issues"
+	},
+	"homepage": "https://nhoizey.github.io/images-responsiver/eleventy-plugin-images-responsiver/",
+	"gitHead": "e59f7fb0422676b8928998b5233c4824ed695c10"
 }
