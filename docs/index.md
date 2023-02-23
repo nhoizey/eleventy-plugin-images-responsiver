@@ -1,84 +1,60 @@
-# Images Responsiver
+# eleventy-plugin-images-responsiver
 
-[![Build Status](https://travis-ci.org/nhoizey/images-responsiver.svg?branch=main)](https://travis-ci.org/nhoizey/images-responsiver)
 [![GitHub stars](https://img.shields.io/github/stars/nhoizey/images-responsiver.svg?style=social)](https://github.com/nhoizey/images-responsiver/stargazers)
-[![license](https://img.shields.io/github/license/nhoizey/images-responsiver)](https://github.com/nhoizey/images-responsiver/blob/main/LICENSE.md)
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/images-responsiver)
-[![Pull requests welcome](https://img.shields.io/badge/PRs-welcome-blueviolet)](https://github.com/nhoizey/images-responsiver/blob/main/CONTRIBUTING.md)
 
-Images Responsiver tries to **help developers** make it **easy for content authors** to tackle **responsive images needs**.
+`eleventy-plugin-images-responsiver` is **a simple solution for most responsive images needs with [Eleventy](https://www.11ty.dev/)**.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+Responsive Images are difficult to implement, but they're **required to provide a good performance to Web users**.
 
-- [Why does this project exist?](#why-does-this-project-exist)
-- [One repository, multiple packages](#one-repository-multiple-packages)
-  - [A Node.js package to ease responsive images: `images-responsiver`](#a-nodejs-package-to-ease-responsive-images-images-responsiver)
-  - [A plugin for Eleventy: `eleventy-plugin-images-responsiver`](#a-plugin-for-eleventy-eleventy-plugin-images-responsiver)
-- [Sources and documentations](#sources-and-documentations)
-- [Contributing](#contributing)
-- [Tools and automations](#tools-and-automations)
-- [License](#license)
-- [Authors](#authors)
+Knowing that [`<picture>` is only required for rare advanced usages](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/), **`eleventy-plugin-images-responsiver` should be enough for most use cases**, known as Resolution Switching. Read [this article on Cloudfour's blog to know more of the theory](https://cloudfour.com/thinks/responsive-images-the-simple-way/).
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+This Eleventy plugin allows authors to **use the standard Markdown syntax for images** (`![alt text](image.jpg "title text")`) and yet **get responsive images in the generated HTML**, with `srcset` and `sizes` attributes.
 
-## Why does this project exist?
+> **Warning**
+> This plugin doesn't generate any image, it has to be used either with already existing images, a local image resizing solution (should work with the official [eleventy-img](https://www.11ty.dev/docs/plugins/image/) plugin), or a third party service ("image CDN") like Cloudinary.
 
-As Steve Jobs [once said](https://www.youtube.com/watch?v=oeqPrUmVz-o):
+# How does it work?
 
-> You've got to start with the customer experience and run backwards to the technology.
+`eleventy-plugin-images-responsiver` is **the glue** between Eleventy plugin and transformations system and [`images-responsiver`](../images-responsiver/), the generic HTML transformation npm package for simple responsive images.
 
-**Responsive images are one of the most difficult topics nowadays** for front end developers and content authors, they involve multiple features and syntaxes, but they are **required to provide a good performance to Web users**.
+Eleventy uses Markdown-it to transform Markdown content into HTML, and then runs the transform added by `eleventy-plugin-images-responsiver`, which calls `images-responsiver` to actually transform the HTML.
 
-Most content authors should not have to learn the complex responsive images HTML syntax, how and it is used by browsers to load the right image for current viewing context.
+Neither `eleventy-plugin-images-responsiver` nor `images-responsiver` transforms (resize) the image files, there are multiple ways to do so explained in the docs.
 
-## One repository, multiple packages
+# Installation
 
-Multiple packages are managed inside this monorepo.
+To install the plugin, install it as a dev dependency in your Eleventy project:
 
-### A Node.js package to ease responsive images: `images-responsiver`
+```
+npm install eleventy-plugin-images-responsiver --save-dev
+```
 
-Images Responsiver transforms plain, simple `<img src="…">` HTML tags into better responsive images syntax with `srcset` and `sizes` attributes.
+# Usage
 
-Knowing that [`<picture>` is only required for rare advanced usages](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/), **Images Responsiver should be enough for most use cases**, where the need is known as Resolution Switching.
+## Step by step tutorial
 
-Read [this article on Cloudfour's blog to know more of the theory](https://cloudfour.com/thinks/responsive-images-the-simple-way/).
+Instead of jumping directly into the list of features and configuration options, let us take your hand and **guide you through a step by step tutorial** with actual examples.
 
-### A plugin for Eleventy: `eleventy-plugin-images-responsiver`
+Let's **[start here](tutorial/00-preparation/#readme)**!
 
-Images Responsiver is also available as a plugin for [Eleventy](https://www.11ty.dev/), an awesome Static Site Generator.
+## Direct access
 
-It allows authors to use the simple and **standard Markdown syntax for images** — `![alt text](image.jpg)` — and yet get responsive images in the generated HTML.
+If you already know how to use the plugin and want to **go directly to a section of the tutorial**, here are direct links:
 
-## Sources and documentations
+- [Step 0: Get the resources to follow this tutorial](tutorial/00-preparation/#readme)
+- [Step 1: Default behaviour without the plugin](tutorial/01-without-plugin/#readme)
+- [Step 2: Default behaviour with the plugin](tutorial/02-with-plugin-default/#readme)
+- [Step 3: Resized images](tutorial/03-resized-images/#readme)
+- [Step 4: Images dimensions](tutorial/04-images-dimensions/#readme)
+- [Step 5: Presets](tutorial/05-presets/#readme)
+- [Step 6: Presets properties](tutorial/06-presets-properties/#readme)
 
-| **package**                          | **source**                                                                                                     | **npm**                                                                                                                                                                                                                                                                                                                   | **docs**                                                                                 |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `images-responsiver`                 | [source](https://github.com/nhoizey/images-responsiver/tree/main/packages/images-responsiver)                  | [![npm version](https://badge.fury.io/js/images-responsiver.svg)](https://www.npmjs.com/package/images-responsiver) [![Package size](https://badgen.net/packagephobia/publish/images-responsiver)](https://packagephobia.com/result?p=images-responsiver)                                                                 | [docs](https://nhoizey.github.io/images-responsiver/images-responsiver/)                 |
-| `eleventy-plugin-images-responsiver` | [source](https://github.com/nhoizey/images-responsiver/tree/main/packages/eleventy-plugin-images-responsiver/) | [![npm version](https://badge.fury.io/js/eleventy-plugin-images-responsiver.svg)](https://www.npmjs.com/package/eleventy-plugin-images-responsiver) [![Package size](https://badgen.net/packagephobia/publish/eleventy-plugin-images-responsiver)](https://packagephobia.com/result?p=eleventy-plugin-images-responsiver) | [docs](https://nhoizey.github.io/images-responsiver/eleventy-plugin-images-responsiver/) |
-
-## Contributing
-
-First, thank you for considering contributing to `images-responsiver`! It's people like you that make the open source community such a great community! 😊
-
-There are many ways to contribute to this project. [Get started here](https://github.com/nhoizey/images-responsiver/blob/main/CONTRIBUTING.md).
-
-## Tools and automations
-
-- This monorepo is managed with [Lerna](https://lerna.js.org/).
-- Tests are run by [jest](https://jestjs.io/) and written in [the `__tests__` folder](https://github.com/nhoizey/images-responsiver/tree/main/packages/images-responsiver/__tests__) for each package.
-- Pull Requests are checked with tests run on GitHub workflows (see [configuration](https://github.com/nhoizey/images-responsiver/blob/main/.github/workflows/tests.yml))
-- Dependencies updates are automated with [dependabot](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/) (see [configuration](https://github.com/nhoizey/images-responsiver/blob/main/.github/dependabot.yml))
-- Pull Requests are rebased as necessary, and merged automaticaly by [Kodiak](https://kodiakhq.com/) if there is an `automerge 🤞` label (set by dependabot for example) and GitHub workflow check is OK (see [configuration](https://github.com/nhoizey/images-responsiver/blob/main/.kodiak.toml))
-- The documentation is written as Markdown files in [the `docs/` folder](https://github.com/nhoizey/images-responsiver/tree/main/docs), and transformed into HTML by [Jekyll](https://jekyllrb.com/) powered [GitHub Pages](https://pages.github.com/): <https://nhoizey.github.io/images-responsiver/>
-
-## License
-
-This project is licensed under the [MIT License](https://github.com/nhoizey/images-responsiver/blob/main/LICENSE.md).
-
-## Authors
+# Authors
 
 - [Nicolas Hoizey](https://github.com/nhoizey): Idea and initial work, maintainer
 
 See also the list of [contributors](https://github.com/nhoizey/images-responsiver/contributors) who participated in this project.
+
+# License
+
+This project is licensed under the [MIT License](LICENSE.md).
