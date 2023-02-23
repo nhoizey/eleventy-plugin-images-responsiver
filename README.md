@@ -3,12 +3,15 @@
 [![Build Status](https://github.com/nhoizey/eleventy-plugin-images-responsiver/workflows/Tests%20CI/badge.svg)](https://github.com/nhoizey/eleventy-plugin-images-responsiver/actions)
 [![GitHub stars](https://img.shields.io/github/stars/nhoizey/eleventy-plugin-images-responsiver.svg?style=social)](https://github.com/nhoizey/eleventy-plugin-images-responsiver/stargazers)
 [![license](https://img.shields.io/github/license/nhoizey/eleventy-plugin-images-responsiver)](https://github.com/nhoizey/eleventy-plugin-images-responsiver/blob/main/LICENSE.md)
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/images-responsiver)
-[![Pull requests welcome](https://img.shields.io/badge/PRs-welcome-blueviolet)](https://github.com/nhoizey/eleventy-plugin-images-responsiver/blob/main/CONTRIBUTING.md)
+
+`eleventy-plugin-images-responsiver` is **a simple solution for most responsive images needs with [Eleventy](https://www.11ty.dev/)**.
+
+This Eleventy plugin allows authors to **use the standard Markdown syntax for images** (`![alt text](image.jpg "title text")`) and yet **get responsive images in the generated HTML**, with `srcset` and `sizes` attributes.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Why does this project exist?](#why-does-this-project-exist)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Alternatives](#alternatives)
@@ -18,7 +21,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Why does this project exist?
+# Why does this project exist?
 
 As Steve Jobs [once said](https://www.youtube.com/watch?v=oeqPrUmVz-o):
 
@@ -26,11 +29,9 @@ As Steve Jobs [once said](https://www.youtube.com/watch?v=oeqPrUmVz-o):
 
 **Responsive images are one of the most difficult topics nowadays** for front end developers and content authors, they involve multiple features and syntaxes, but they are **required to provide a good performance to Web users**.
 
-Most content authors should not have to learn the complex responsive images HTML syntax, how and it is used by browsers to load the right image for current viewing context.
+Most content authors should not have to learn the complex responsive images HTML syntax, and how it is used by browsers to load the right image for current viewing context.
 
-`eleventy-plugin-images-responsiver` is **a simple solution for most responsive images needs with [Eleventy](https://www.11ty.dev/)**.
-
-This Eleventy plugin allows authors to **use the standard Markdown syntax for images** (`![alt text](image.jpg "title text")`) and yet **get responsive images in the generated HTML**, with `srcset` and `sizes` attributes.
+Knowing that [`<picture>` is only required for rare advanced usages](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/), **`eleventy-plugin-images-responsiver` should be enough for most use cases**, known as Resolution Switching. Read [this article on Cloudfour's blog to know more of the theory](https://cloudfour.com/thinks/responsive-images-the-simple-way/).
 
 > **Warning**
 > This plugin doesn't generate any image, it has to be used either with already existing images, a local image resizing solution (should work with the official [eleventy-img](https://www.11ty.dev/docs/plugins/image/) plugin), or a third party service ("image CDN") like Cloudinary.
