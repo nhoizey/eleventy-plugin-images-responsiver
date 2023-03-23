@@ -36,18 +36,18 @@
 	"author": "Nicolas Hoizey",
 	"license": "MIT",
 	"peerDependencies": {
-		"@11ty/eleventy": ">= 2.0.0 < 3"
+		"@11ty/eleventy": "^2.0.0"
 	},
 	"dependencies": {
 		"images-responsiver": "^1.12.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^12.1.4",
-		"@commitlint/config-conventional": "^13.1.0",
-		"eslint": "^7.29.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-prettier": "^4.0.0",
-		"husky": "^7.0.0"
+		"@commitlint/config-conventional": "^13.2.0",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"husky": "^7.0.4"
 	},
 	"bugs": {
 		"url": "https://github.com/nhoizey/images-responsiver/issues"
