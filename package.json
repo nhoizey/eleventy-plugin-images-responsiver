@@ -5,7 +5,7 @@
 	"main": "eleventy-plugin-images-responsiver.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/nhoizey/images-responsiver.git"
+		"url": "git+https://github.com/nhoizey/eleventy-plugin-images-responsiver.git"
 	},
 	"files": [
 		"./"
@@ -50,8 +50,8 @@
 		"husky": "^7.0.4"
 	},
 	"bugs": {
-		"url": "https://github.com/nhoizey/images-responsiver/issues"
+		"url": "https://github.com/nhoizey/eleventy-plugin-images-responsiver/issues"
 	},
-	"homepage": "https://nhoizey.github.io/images-responsiver/eleventy-plugin-images-responsiver/",
+	"homepage": "https://nhoizey.github.io/eleventy-plugin-images-responsiver/",
 	"gitHead": "e59f7fb0422676b8928998b5233c4824ed695c10"
 }
