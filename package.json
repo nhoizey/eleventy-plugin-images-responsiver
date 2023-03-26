@@ -39,7 +39,7 @@
 		"@11ty/eleventy": "^2.0.0"
 	},
 	"dependencies": {
-		"images-responsiver": "^1.12.1"
+		"images-responsiver": "^1.13.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^12.1.4",
