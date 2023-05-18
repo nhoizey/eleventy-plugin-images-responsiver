@@ -1,5 +1,6 @@
 # eleventy-plugin-images-responsiver
 
+[![npm](https://img.shields.io/npm/v/eleventy-plugin-images-responsiver?logo=npm&style=for-the-badge)](<![npm](https://img.shields.io/npm/v/eleventy-plugin-images-responsiver?logo=npm&style=for-the-badge)>)
 [![GitHub stars](https://img.shields.io/github/stars/nhoizey/eleventy-plugin-images-responsiver.svg?style=for-the-badge&logo=github)](https://github.com/nhoizey/eleventy-plugin-images-responsiver/stargazers)
 [![Follow @nhoizey@mamot.fr](https://img.shields.io/mastodon/follow/000262395?domain=https%3A%2F%2Fmamot.fr&style=for-the-badge&logo=mastodon&logoColor=white&color=6364FF)](https://mamot.fr/@nhoizey)
 
