@@ -35,9 +35,6 @@
 	],
 	"author": "Nicolas Hoizey",
 	"license": "MIT",
-	"peerDependencies": {
-		"@11ty/eleventy": "^2.0.1"
-	},
 	"dependencies": {
 		"images-responsiver": "^1.13.0"
 	},
@@ -53,5 +50,8 @@
 		"url": "https://github.com/nhoizey/eleventy-plugin-images-responsiver/issues"
 	},
 	"homepage": "https://nhoizey.github.io/eleventy-plugin-images-responsiver/",
-	"gitHead": "e59f7fb0422676b8928998b5233c4824ed695c10"
+	"gitHead": "e59f7fb0422676b8928998b5233c4824ed695c10",
+	"11ty": {
+		"compatibility": ">=3 <4"
+	}
 }
