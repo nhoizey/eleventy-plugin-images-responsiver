@@ -1,8 +1,8 @@
 'use strict';
 
-import pkg from 'package.json' with { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
-const imagesResponsiver = require('images-responsiver');
+import imagesResponsiver from 'images-responsiver';
 
 export default (eleventyConfig, options = {}) => {
 	// First check if the plugin is used with a compatible version of Eleventy
