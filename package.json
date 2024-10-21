@@ -10,9 +10,11 @@
 	"files": [
 		"./"
 	],
+	"type": "module",
 	"scripts": {
 		"lint": "eslint . --ext js --quiet --fix",
-		"prepare": "husky install"
+		"test": "echo \"No test specified yet\"",
+		"prepare": "node .husky/install.mjs"
 	},
 	"keywords": [
 		"static-site-generator",
@@ -35,23 +37,23 @@
 	],
 	"author": "Nicolas Hoizey",
 	"license": "MIT",
-	"peerDependencies": {
-		"@11ty/eleventy": "^2.0.1"
-	},
 	"dependencies": {
 		"images-responsiver": "^1.13.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^12.1.4",
-		"@commitlint/config-conventional": "^13.2.0",
-		"eslint": "^7.32.0",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-prettier": "^4.2.1",
-		"husky": "^7.0.4"
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"eslint": "^9.13.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"husky": "^9.1.6"
 	},
 	"bugs": {
 		"url": "https://github.com/nhoizey/eleventy-plugin-images-responsiver/issues"
 	},
 	"homepage": "https://nhoizey.github.io/eleventy-plugin-images-responsiver/",
-	"gitHead": "e59f7fb0422676b8928998b5233c4824ed695c10"
+	"gitHead": "e59f7fb0422676b8928998b5233c4824ed695c10",
+	"11ty": {
+		"compatibility": ">=3 <4"
+	}
 }
