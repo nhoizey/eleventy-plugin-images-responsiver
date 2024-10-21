@@ -13,7 +13,7 @@
 	"type": "module",
 	"scripts": {
 		"lint": "eslint . --ext js --quiet --fix",
-		"prepare": "husky install"
+		"prepare": "node .husky/install.mjs"
 	},
 	"keywords": [
 		"static-site-generator",
