@@ -38,7 +38,7 @@ npm install eleventy-plugin-images-responsiver --save-dev
 And here's what we added to `.eleventy.js`:
 
 ```javascript
-const imagesResponsiver = require('eleventy-plugin-images-responsiver');
+import imagesResponsiver from 'eleventy-plugin-images-responsiver';
 eleventyConfig.addPlugin(imagesResponsiver);
 ```
 

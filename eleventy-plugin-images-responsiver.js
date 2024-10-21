@@ -4,7 +4,7 @@ import pkg from './package.json' with { type: 'json' };
 
 import imagesResponsiver from 'images-responsiver';
 
-export default (eleventyConfig, options = {}) => {
+export default async (eleventyConfig, userOptions = {}) => {
 	// First check if the plugin is used with a compatible version of Eleventy
 	try {
 		eleventyConfig.versionCheck(pkg['11ty'].compatibility);
@@ -17,7 +17,7 @@ export default (eleventyConfig, options = {}) => {
 
 	eleventyConfig.addTransform('imagesResponsiver', function (content) {
 		if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
-			return imagesResponsiver(content, options, this.page.url);
+			return imagesResponsiver(content, userOptions, this.page.url);
 		}
 		return content;
 	});

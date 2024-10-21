@@ -1,6 +1,6 @@
-module.exports = function (eleventyConfig) {
-	const markdownIt = require('markdown-it');
-	const markdownItAttributes = require('markdown-it-attrs');
+export default async function (eleventyConfig) {
+	import markdownIt from 'markdown-it';
+	import markdownItAttributes from 'markdown-it-attrs';
 	eleventyConfig.setLibrary('md', markdownIt().use(markdownItAttributes));
 
 	eleventyConfig.addPassthroughCopy('src/assets');
