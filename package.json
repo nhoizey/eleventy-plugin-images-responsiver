@@ -8,7 +8,6 @@
 		"url": "git+https://github.com/nhoizey/eleventy-plugin-images-responsiver.git"
 	},
 	"files": [
-		"./"
 	],
 	"type": "module",
 	"scripts": {
@@ -47,7 +46,8 @@
 		"eslint": "^9.13.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
-		"husky": "^9.1.6"
+		"husky": "^9.1.6",
+		"np": "^10.0.7"
 	},
 	"bugs": {
 		"url": "https://github.com/nhoizey/eleventy-plugin-images-responsiver/issues"
