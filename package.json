@@ -1,14 +1,13 @@
 {
 	"name": "eleventy-plugin-images-responsiver",
-	"version": "2.2.0",
+	"version": "3.0.0",
 	"description": "Global solution for responsive images in Eleventy, allowing authors to use Markdown syntax for image and yet get responsive images in generated HTML.",
 	"main": "eleventy-plugin-images-responsiver.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nhoizey/eleventy-plugin-images-responsiver.git"
 	},
-	"files": [
-	],
+	"files": [],
 	"type": "module",
 	"scripts": {
 		"lint": "eslint . --ext js --quiet --fix",
